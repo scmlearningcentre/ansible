@@ -35,5 +35,5 @@
     file:
      state: absent
      path: '{{ maven_home_parent_directory }}/{{ maven_file_name }}'
-    when: maven_installed.stat.exists != True
+
 
