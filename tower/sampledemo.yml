@@ -5,4 +5,4 @@
       debug:
         msg: "Hello World!"
     - name: Create test file
-      command: touch /tmp/testme
+      command: ansible --version
