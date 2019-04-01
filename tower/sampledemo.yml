@@ -5,4 +5,4 @@
       debug:
         msg: "Hello World!"
     - name: Create test file
-      command: ansible --version
+      file: path=/tmp/testme state=touch mode=0777
