@@ -1,0 +1,5 @@
+[demo]
+node1 ansible_host=anmuruga2c.mylabserver.com ansible_user=ansibleadm
+
+[local]
+master ansible_host=anmuruga1c.mylabserver.com ansible_user=ansibleadm
