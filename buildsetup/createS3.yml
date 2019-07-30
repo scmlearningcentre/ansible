@@ -1,0 +1,8 @@
+--- # Creating EC2 Instances in AWS
+- hosts: localhost     # change this to the group where your master is preset #
+  become: yes
+  become_user: ansible # change this to the common build account created # 
+  connection: local
+  gather_facts: no
+  roles:
+    - s3

@@ -8,5 +8,8 @@
 3. Create EC2 machine & add an entry to dynamic hosts file (by default)
   $ ansible-playbook createEc2.yml 
 
+4. Create S3 bucket
+  $ ansible-playbook createS3.yml
+
 # ansible example for LAMP stack setup - Linux Apache Mysql PHP/Python
 $ ansible-playbook lamp.yml

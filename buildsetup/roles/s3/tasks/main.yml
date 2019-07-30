@@ -1,0 +1,13 @@
+  - name: Install python-pip library  # prerequisite for ubuntu machines #
+    apt: name='{{item}}'
+    with_items:
+     - python-pip
+     - python-dev
+  - name: Install python-boto library
+    pip: name=boto
+  - name: Create S3 bucket
+    s3_bucket:                       # change the bucket name and region as per your account #
+       name: mys3bucket
+       region: "us-east-1"
+       state: present
+
