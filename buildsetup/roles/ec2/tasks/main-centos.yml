@@ -1,0 +1,16 @@
+  - name: Install python-boto library  # prerequisite for centos machines #
+    pip: name=boto
+  - name: Create AWS Instances
+    ec2:
+     key_name: "wezva"
+     instance_type: "t2.micro"
+     image: "ami-c58c1dd3"
+     wait: true
+     region: "us-east-1"
+    register: ec2
+  - name: Add new instance to host group
+    template:
+     src: hosts.j2
+     dest: hosts.test
+    tags: add
+    with_items: "{{ ec2.instances }}"

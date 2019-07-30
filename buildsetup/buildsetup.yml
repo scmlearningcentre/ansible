@@ -1,6 +1,6 @@
 ---
 - hosts: demo
   become: yes
-  #become_user: ansible
+  become_user: ansible # change this to the common build account created #
   roles:
    - maven
